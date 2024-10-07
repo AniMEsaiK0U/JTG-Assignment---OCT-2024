@@ -1,0 +1,1060 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Reset and base styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 116px; 
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+
+}
+
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  overflow: hidden;
+  transition: color 0.3s ease-in;
+  z-index: 1;
+}
+header nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #FFA500;
+  transform: translate(-100%, -100%); 
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+header nav ul li a:hover::before {
+  transform: translate(0, 0); 
+}
+
+
+/* Hero section styles */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 116px);
+  padding: 0 50px;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 25px;
+  max-width: 50%;
+  gap: 60px;
+}
+
+.intro-section h1 {
+  font-weight: 600;
+  font-size: 48px;
+  color: #000;
+}
+
+.intro-section .user-name {
+  color: #000;
+  font-weight: 600;
+}
+
+.intro-section .user-title {
+  color: #FFA500;
+  font-weight: 600;
+}
+
+.intro-section p {
+  margin: 20px 0;
+  color: #666;
+}
+
+.btn-call {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #FFA500;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-call:hover {
+  background-color: #ff9000;
+  transform: translateY(-2px);
+}
+
+.intro-illustration img {
+  margin-top: 80px;
+  width: 808.01px;
+  height: 550.41px;
+  object-fit: cover;
+}
+
+
+/*skills Main Section Styling */
+.expertise-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f0f6; /* Light background */
+}
+
+.expertise-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-summary {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* Expertise Cards (2 rows, 3 columns) */
+.expertise-container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+  gap: 30px; /* Space between columns */
+  margin-bottom: 40px;
+}
+
+.expertise-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: scale(1.05); /* Hover effect to enlarge slightly */
+}
+
+.expertise-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Skill Progress Bars */
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-item p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.progress-container {
+  background-color: #e0e0e0; /* Light gray background */
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+  position: relative;
+}
+
+.progress-bar {
+  background-color: #f9b621; /* Yellow color for progress */
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Button Styling */
+.add-expertise-btn {
+  background-color: #f9b621;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-expertise-btn:hover {
+  background-color: #e0a51f; /* Darker yellow on hover */
+}
+
+/* Projects Section */
+.work-section {
+  padding: 50px 50px;
+  background: rgba(240, 240, 246, 1);
+  text-align: center;
+}
+
+.work-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.work-section p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.work-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.work-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.work-info h3 {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.work-info p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.tech-stack span {
+  background-color: #eee;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+}
+
+/* Recommendations Section */
+.feedback-section {
+  padding: 50px 50px;
+  background: rgba(240, 240, 246, 1);
+  text-align: center;
+}
+
+.feedback-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.feedback-section p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Owl Carousel adjustments */
+.owl-carousel .owl-item {
+  padding: 18px 18px; 
+}
+
+.feedback-card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 32px;
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 2.5s ease, box-shadow 2.5s ease;
+}
+
+.feedback-card .stars {
+  color: #FFA500;
+  font-size: 20px;
+}
+
+.feedback-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.feedback-card h3, .feedback-card p {
+  margin: 0 0 10px 0;
+  flex-grow: 1; /* Ensures text area expands to fill available space */
+}
+
+.feedback-card p {
+  overflow: hidden;
+  text-overflow: ellipsis; /* For handling long text */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.feedback-card .profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile img {
+  width: 60px !important;
+  height: 60px;
+  border-radius: 50% !important;
+  margin-right: 15px;
+  object-fit: cover;
+  display: block;
+}
+
+.profile .info h4 {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.profile .info p {
+  font-size: 14px;
+  align-items: center;
+  justify-items: center;
+  margin-left: 15px;
+  color: #666;
+}
+
+/* Adjust the spacing between dots */
+.owl-dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px; /* Adjust margin for better spacing */
+  display:inline-block;
+  border-radius: 50%;
+  background: #FFA500;
+  transition: background 0.3s ease;
+
+}
+
+.owl-dot.active {
+  background: #FFA500;
+}
+
+/* Contact Section CSS */
+
+.reachout-section {
+  background: rgba(240, 240, 246, 1);
+}
+
+.reachout-section .main-title {
+  padding-left: 20px;
+}
+
+.reachout-section .sub-title {
+  padding-right: 140px;
+}
+
+.title-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Ensure both sections are aligned at the top */
+  padding: 10px 30px;
+}
+
+.form-left {
+  flex-basis: 70%;
+  background: rgba(255, 255, 255, 1);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-right {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.form-left, .form-right {
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.contact-info-container {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.icon {
+  background-color: #f9b621;
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.info-details {
+  display: block;
+  text-align: left;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.label {
+  font-weight: 500;
+  color: rgba(118, 118, 118, 1);
+  font-style: 18px;
+}
+
+.value {
+  color: rgba(118, 118, 118, 1);
+  text-align: right;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* Form Styles */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(240, 240, 246, 1); /* Background color of the input box */
+}
+
+button[type="submit"] {
+  background-color: #f9b621;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #e0a11d;
+}
+
+/* Toast Notification Styling */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  transform: translateX(-50%);
+}
+
+/* Show the toast (animation) */
+.toast.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from { bottom: 0; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
+}
+
+/* Main Footer Styling */
+.footer-section {
+  background-color: #f0f0f6;
+  padding: 50px 0;
+}
+
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* First Section: Logos */
+.footer-logos {
+  display: flex;
+  justify-content: space-evenly; /* Even space between logos */
+  margin-bottom: 40px;
+  padding: 0 20px; /* Add padding for better spacing */
+}
+
+.footer-logos img {
+  width: 140px; /* Adjust the size of the logos */
+  height: 144px !important;
+}
+
+/* Main Content Section (Four Columns) */
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly between sections */
+  align-items: center;
+  text-align: left;
+  padding: 0 20px;
+  margin: 0 80px;
+  margin-top: 10px;
+  gap: 30px;
+}
+
+/* Individual Column Styling */
+.footer-left, .footer-links, .footer-portfolio, .footer-social {
+  flex-basis: 23%; /* Equal width for each section */
+  padding: 0 50px 0 20px; /* Space between columns */
+  box-sizing: border-box;
+}
+
+/* Align images and ratings below each other */
+.footer-left {
+  text-align: center;
+  height: auto !important;
+}
+
+.footer-left .footer-brand-logo img {
+  width: 158px !important;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 40px;
+}
+
+.footer-left img {
+  height: 40px;
+  width: 91px !important;
+  border-radius: 5px;
+}
+
+.footer-reviews {
+  text-align: left;
+  font-size: 12px;
+  color: rgba(118, 118, 118, 1);
+  font-weight: 400;
+}
+
+.footer-reviews .review {
+  margin-bottom: 20px; /* Spacing between each rating */
+}
+
+.footer-reviews img {
+  text-align: left;
+  display: block;
+  width: 40px; /* Adjust size of the rating icons */
+}
+
+.footer-links {
+  margin-top: 100px;
+  line-height: 1.2;
+  margin-left: 150px;
+  font-size: 16px;
+}
+
+.footer-portfolio {
+  margin-left: 50px;
+  margin-top: 100px;
+  width: 100%;
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+.footer-social {
+  margin-top: 60px;
+  margin-left: 50px;
+  line-height: 1.2;
+}
+
+.footer-left {
+  margin-top: 50px;
+}
+
+.footer-links h3, .footer-portfolio h3, .footer-social h3 {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.footer-links ul, .footer-portfolio ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li, .footer-portfolio ul li {
+  margin-bottom: 15px;
+}
+
+.footer-links ul li a, .footer-portfolio ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+  font-size: 16px;
+}
+
+.footer-links ul li a:hover, .footer-portfolio ul li a:hover {
+  color: #f9b621;
+}
+
+/* Connect Section */
+.footer-social a img {
+  width: 100px;
+  height: 25px;
+  margin: 2px 0;
+  display: block;
+  object-fit: cover;
+}
+
+.footer-social a {
+  margin-right: 10px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+}
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .expertise-container {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+/* Modal styling */
+.modal {
+  display: none; /* Ensure the modal is hidden by default */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    max-width: 700px;
+    height: auto;
+    box-sizing: border-box; 
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+/* Header styling */
+.modal-content h2 {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form label and input fields */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f6;
+    font-size: 18px;
+}
+
+input[type="text"]::placeholder, input[type="number"]::placeholder {
+    color: #888;
+}
+
+/* Skill inputs layout */
+.skills-inputs {
+    margin-top: 10px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.skill-row input {
+    width: 48%;
+    background-color: #f0f0f6;
+}
+
+.skill-row .skill-name {
+  flex-basis: 75%; 
+}
+
+.skill-row .skill-proficiency {
+  flex-basis: 21%; 
+}
+
+/* Action Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-btn {
+    background-color: #f9b621;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-btn:hover {
+    background-color: #e0a51f;
+}
+
+.modal-cancel-btn {
+    background-color: #ffcccc;
+    color: #ff6666;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-cancel-btn:hover {
+    background-color: #ff9999;
+}
+
+/* Prevent body scrolling when the modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .expertise-container {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+/* Modal styling */
+.modal {
+  display: none; /* Ensure the modal is hidden by default */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    max-width: 700px;
+    height: auto; /* Allow the modal to auto-size based on content */
+    box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Make the content flow vertically */
+    justify-content: space-between; /* Ensure the buttons and content are spaced properly */
+}
+/* Header styling */
+.modal-content h2 {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form label and input fields */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f6;
+    font-size: 18px;
+}
+
+input[type="text"]::placeholder, input[type="number"]::placeholder {
+    color: #888;
+}
+
+/* Skill inputs layout */
+.skills-inputs {
+    margin-top: 10px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.skill-row input {
+    width: 48%; /* Adjust width for skill and proficiency inputs */
+    background-color: #f0f0f6;
+}
+
+.skill-row .skill-name {
+  flex-basis: 75%; /* Skill field takes up 70% of the row */
+}
+
+.skill-row .skill-proficiency {
+  flex-basis: 21%; /* Proficiency field takes up 30% of the row */
+}
+
+/* Action Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-btn {
+    background-color: #f9b621;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-btn:hover {
+    background-color: #e0a51f;
+}
+
+.modal-cancel-btn {
+    background-color: #ffcccc;
+    color: #ff6666;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-cancel-btn:hover {
+    background-color: #ff9999;
+}
+
+/* Prevent body scrolling when the modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 50px 20px;
+  }
+
+  .intro-content,
+  .intro-illustration {
+    max-width: 100%;
+  }
+
+  .intro-illustration img {
+    width: 100%;
+    height: auto;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 10px 20px;
+  }
+
+  .feedback-section {
+    padding: 30px 20px;
+  }
+
+  .feedback-card {
+    max-width: 100%;
+  }
+}
